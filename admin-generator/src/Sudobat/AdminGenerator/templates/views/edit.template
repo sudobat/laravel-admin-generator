@@ -1,0 +1,20 @@
+{{%FILTERS}}
+{{=<% %>=}}
+@extends('<% prefix %>.layout')
+
+@section('content')
+
+<h3 class="form-title">Edit <% name %></h3>
+
+{{
+	Form::model($<% name | case.lower %>, [
+		'url' => URL::route('<% prefix %>.<% name | case.lower %>.update', ['id' => $<% name | case.lower %>->id]),
+		'method' => 'PUT'
+	])
+}}
+
+@include('<% prefix %>.<% name | case.lower %>.form')
+
+{{ Form::close() }}
+
+@stop
