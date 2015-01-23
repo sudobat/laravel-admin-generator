@@ -20,5 +20,5 @@
             "Sudobat\\AdminGenerator\\": "src/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "dev"
 }
